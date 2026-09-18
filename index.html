@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>簡報集</title>
+<style>
+  :root {
+    --bg: #fbfaf8; --fg: #1a1815; --muted: #6b6560;
+    --card: #ffffff; --line: #e6e1da; --accent: #b5510f;
+  }
+  :root:not([data-theme="light"]) {
+    @media (prefers-color-scheme: dark) {
+      --bg: #17161a; --fg: #ece9e4; --muted: #9a938c;
+      --card: #201f24; --line: #34323a; --accent: #e8874a;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #17161a; --fg: #ece9e4; --muted: #9a938c;
+    --card: #201f24; --line: #34323a; --accent: #e8874a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font-family: -apple-system, "PingFang TC", "Noto Sans TC", system-ui, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 64px 16px 96px; }
+  h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); margin: 0 0 8px; letter-spacing: -0.02em; }
+  .sub { color: var(--muted); margin: 0 0 40px; }
+  ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+  a.card {
+    display: block; padding: 20px 22px; background: var(--card);
+    border: 1px solid var(--line); border-radius: 12px;
+    text-decoration: none; color: inherit; transition: border-color .15s, transform .15s;
+  }
+  a.card:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .t { font-weight: 600; font-size: 1.05rem; }
+  .d { color: var(--muted); font-size: .9rem; margin-top: 4px; }
+  .empty {
+    padding: 32px 22px; border: 1px dashed var(--line);
+    border-radius: 12px; color: var(--muted); text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>簡報集</h1>
+  <p class="sub">Reveal.js 互動簡報</p>
+
+  <!-- 新增簡報時，複製下面這段註解裡的範本貼進 <ul> 即可
+  <li><a class="card" href="資料夾名稱/">
+    <div class="t">簡報標題</div>
+    <div class="d">日期・一句話說明</div>
+  </a></li>
+  -->
+
+  <ul>
+    <li class="empty">還沒有簡報。跟 Claude 說「幫我把這份教材做成 HTML 互動簡報」。</li>
+  </ul>
+</div>
+</body>
+</html>

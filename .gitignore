@@ -1,0 +1,6 @@
+.DS_Store
+*.log
+.env
+.openai.env
+node_modules/
+_scratch/
